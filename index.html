@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Rotator</title>
+</head>
+<body>
+    <h1>Click a Link:</h1>
+    <a id="link1" href="https://example.com/page1">Link 1</a>
+    <a id="link2" href="https://example.com/page2">Link 2</a>
+    <!-- Add more links as needed -->
+
+    <script>
+        // Randomly choose a link
+        const links = ['link1', 'link2']; // Add more IDs if needed
+        const randomIndex = Math.floor(Math.random() * links.length);
+        const chosenLink = document.getElementById(links[randomIndex]);
+
+        // Redirect to the chosen link
+        if (chosenLink) {
+            window.location.href = chosenLink.href;
+        }
+    </script>
+</body>
+</html>
