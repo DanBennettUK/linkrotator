@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose a stream!</title>
+</head>
+<body>
+    <h1>Choose a stream to watch:</h1>
+    <ul>
+        <li><a id="link1" href="https://www.twitch.tv/bierbankb">bierbankb</a></li>
+        <li><a id="link2" href="https://www.twitch.tv/fishc0p">fishc0p</a></li>
+    </ul>
+    <!-- Add more links as needed -->
+
+    <script>
+        // Randomly choose a link
+        const links = ['link1', 'link2']; // Add more IDs if needed
+        const randomIndex = Math.floor(Math.random() * links.length);
+        const chosenLink = document.getElementById(links[randomIndex]);
+
+        // Redirect to the chosen link
+        if (chosenLink) {
+            window.location.href = chosenLink.href;
+        }
+    </script>
+</body>
+</html>
